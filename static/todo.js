@@ -5,7 +5,6 @@ $(function() {
     $("#form").keypress(function(event) {
         if (event.keyCode == 13) {
             event.preventDefault();
-            console.log(event.keyCode);
             var data = $("#new-task").serialize();
             $.post('/add_task', data, function() {});
             $("ul").empty();
@@ -29,7 +28,6 @@ $(function() {
         });
     });
     $('#remove-completed').on('click', function(){
-        console.log("remove completed");
         $.post('/remove_complete');
         $("ul").empty();
         $.get('/tasks', updateList);
