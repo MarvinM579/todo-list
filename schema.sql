@@ -3,3 +3,5 @@ CREATE TABLE task (
   description text NOT NULL,
   done boolean default FALSE NOT NULL
 );
+
+Yes
