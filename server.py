@@ -21,6 +21,7 @@ def list_tasks():
 def add_task():
     description = request.form.get('task')
     results = db.insert('task', description=description)
+    print results
     return jsonify(results)
 
 
